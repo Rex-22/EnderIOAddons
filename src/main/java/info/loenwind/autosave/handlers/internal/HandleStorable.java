@@ -40,7 +40,7 @@ public class HandleStorable<T extends Object> implements IHandler<T> {
 
   @Override
   public boolean canHandle(Class<?> clazz) {
-    Storable annotation = clazz.getAnnotation(info.loenwind.autosave.annotations.Storable.class);
+    Storable annotation = clazz.getAnnotation(Storable.class);
     return annotation != null && annotation.handler() == this.getClass();
   }
 

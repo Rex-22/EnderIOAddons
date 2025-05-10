@@ -48,7 +48,7 @@ public class MagChargerRecipeHandler extends TemplateRecipeHandler {
 
   @Override
   public void loadTransferRects() { // TODO ???
-    transferRects.add(new TemplateRecipeHandler.RecipeTransferRect(new Rectangle(149, 32, 16, 16), "EnderIOAddonsMagCharger", new Object[0]));
+    transferRects.add(new RecipeTransferRect(new Rectangle(149, 32, 16, 16), "EnderIOAddonsMagCharger", new Object[0]));
   }
 
   @Override
@@ -101,7 +101,7 @@ public class MagChargerRecipeHandler extends TemplateRecipeHandler {
   protected static final int xOff = 13;
   protected static final int yOff = 11;
 
-  public class MagChargerRecipe extends TemplateRecipeHandler.CachedRecipe {
+  public class MagChargerRecipe extends CachedRecipe {
 
 
     private ArrayList<PositionedStack> input;

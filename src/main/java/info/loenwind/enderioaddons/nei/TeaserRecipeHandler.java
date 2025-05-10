@@ -137,7 +137,7 @@ public class TeaserRecipeHandler extends TemplateRecipeHandler {
   protected static final int xOff = 13;
   protected static final int yOff = 11;
 
-  public class TeaserRecipe extends TemplateRecipeHandler.CachedRecipe {
+  public class TeaserRecipe extends CachedRecipe {
 
     private final PositionedStack output;
     private final String textKey;

@@ -100,7 +100,7 @@ public class RendererFrameworkMachine extends TechneMachineRenderer<AbstractTile
     bb = bb.translate(x, y, z);
 
     IIcon[] icons = getBlockTextures(te, tankSlot);
-    CubeRenderer.render(bb, icons, null, FaceRenderer.stdBrightness);
+    CubeRenderer.get().render(bb, icons, null, FaceRenderer.stdBrightness);
   }
 
   private static ForgeDirection turn(@Nonnull ForgeDirection dir, @Nonnull TankSlot tankSlot) {

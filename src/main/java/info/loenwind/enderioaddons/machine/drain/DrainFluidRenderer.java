@@ -48,7 +48,7 @@ public class DrainFluidRenderer extends TileEntitySpecialRenderer {
 
     Tessellator.instance.startDrawingQuads();
     Tessellator.instance.addTranslation(x, y, z);
-    CubeRenderer.render(bb, icon_fluid);
+    CubeRenderer.get().render(bb, icon_fluid);
     Tessellator.instance.addTranslation(-x, -y, -z);
     Tessellator.instance.draw();
 

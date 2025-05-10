@@ -24,10 +24,10 @@ public class Reader {
   /**
    * Restore an object's fields from NBT data as if its class was annotated
    * {@link Storable} without a special handler.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param registry
    *          The {@link Registry} to look up {@link IHandler}s for the fields
    *          of the given object
@@ -53,10 +53,10 @@ public class Reader {
    * Restore an object's fields from NBT data as if its class was annotated
    * {@link Storable} without a special handler using the {@link Registry}
    * {@link Registry#GLOBAL_REGISTRY GLOBAL_REGISTRY}.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param phase
    *          A set of {@link StoreFor}s to indicate which fields to process.
    *          Only fields that are annotated with a matching {@link StoreFor}
@@ -67,17 +67,17 @@ public class Reader {
    * @param object
    *          The object that should be restored
    */
-  public static <T> void read(@Nullable Set<Store.StoreFor> phase, @Nullable NBTTagCompound tag, @Nonnull T object) {
+  public static <T> void read(@Nullable Set<StoreFor> phase, @Nullable NBTTagCompound tag, @Nonnull T object) {
     read(Registry.GLOBAL_REGISTRY, NullHelper.notnull(phase, "Missing phase"), NullHelper.notnull(tag, "Missing NBT"), object);
   }
 
   /**
    * Restore an object's fields from NBT data as if its class was annotated
    * {@link Storable} without a special handler.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param registry
    *          The {@link Registry} to look up {@link IHandler}s for the fields
    *          of the given object
@@ -99,10 +99,10 @@ public class Reader {
    * Restore an object's fields from NBT data as if its class was annotated
    * {@link Storable} without a special handler using the {@link Registry}
    * {@link Registry#GLOBAL_REGISTRY GLOBAL_REGISTRY}.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param phase
    *          A s{@link StoreFor} to indicate which fields to process. Only
    *          fields that are annotated with a matching {@link StoreFor} are
@@ -121,10 +121,10 @@ public class Reader {
    * Restore an object's fields from NBT data as if its class was annotated
    * {@link Storable} without a special handler, ignoring {@link StoreFor}
    * restrictions.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param registry
    *          The {@link Registry} to look up {@link IHandler}s for the fields
    *          of the given object
@@ -143,10 +143,10 @@ public class Reader {
    * {@link Storable} without a special handler using the {@link Registry}
    * {@link Registry#GLOBAL_REGISTRY GLOBAL_REGISTRY}, ignoring {@link StoreFor}
    * restrictions.
-   * 
+   *
    * <p>
    * See also: {@link Store} for the field annotation.
-   * 
+   *
    * @param tag
    *          A {@link NBTTagCompound} to read from. This NBTTagCompound
    *          represents the whole object, with its fields in the tags.

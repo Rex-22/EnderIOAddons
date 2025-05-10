@@ -1,46 +1,44 @@
-# Handle line endings automatically for files detected as text
-# and leave all files detected as binary untouched.
-* text=auto
+* text eol=lf
 
-#
-# The above will handle all files NOT found below
-#
-# These files are text and should be normalized (Convert crlf => lf)
-*.md            text
-*.adoc          text
-*.textile       text
-*.mustache      text
-*.csv           text
-*.tab           text
-*.tsv           text
-*.css           text
-*.df            text
-*.htm           text
-*.html          text
-*.java          text
-*.js            text
-*.json          text
-*.jsp           text
-*.jspf          text
-*.properties    text
-*.sh            text
-*.sql           text
-*.svg           text
-*.tld           text
-*.txt           text
-*.xml           text
-*.sql           text
+*.[jJ][aA][rR]          binary
 
-# These files are binary and should be left untouched
-# (binary is a macro for -text -diff)
-*.class         binary
-*.dll           binary
-*.ear           binary
-*.gif           binary
-*.ico           binary
-*.jar           binary
-*.jpg           binary
-*.jpeg          binary
-*.png           binary
-*.so            binary
-*.war           binary
+*.[pP][nN][gG]          binary
+*.[jJ][pP][gG]          binary
+*.[jJ][pP][eE][gG]      binary
+*.[gG][iI][fF]          binary
+*.[tT][iI][fF]          binary
+*.[tT][iI][fF][fF]      binary
+*.[iI][cC][oO]          binary
+*.[sS][vV][gG]          text
+*.[eE][pP][sS]          binary
+*.[xX][cC][fF]          binary
+
+*.[kK][aA][rR]          binary
+*.[mM]4[aA]             binary
+*.[mM][iI][dD]          binary
+*.[mM][iI][dD][iI]      binary
+*.[mM][pP]3             binary
+*.[oO][gG][gG]          binary
+*.[rR][aA]              binary
+
+*.7[zZ]                 binary
+*.[gG][zZ]              binary
+*.[tT][aA][rR]          binary
+*.[tT][gG][zZ]          binary
+*.[zZ][iI][pP]          binary
+
+*.[tT][cC][nN]          binary
+*.[sS][oO]              binary
+*.[dD][lL][lL]          binary
+*.[dD][yY][lL][iI][bB]  binary
+*.[pP][sS][dD]          binary
+*.[tT][tT][fF]          binary
+*.[oO][tT][fF]          binary
+
+*.[pP][aA][tT][cC][hH]  -text
+
+*.[bB][aA][tT]          text eol=crlf
+*.[cC][mM][dD]          text eol=crlf
+*.[pP][sS]1             text eol=crlf
+
+*[aA][uU][tT][oO][gG][eE][nN][eE][rR][aA][tT][eE][dD]* binary

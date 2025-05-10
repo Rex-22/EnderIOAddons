@@ -2,6 +2,7 @@ package info.loenwind.enderioaddons.nei;
 
 import static info.loenwind.enderioaddons.config.Config.cobbleWorksEnabled;
 import info.loenwind.enderioaddons.EnderIOAddons;
+import info.loenwind.enderioaddons.Tags;
 import info.loenwind.enderioaddons.config.Config;
 import info.loenwind.enderioaddons.fluid.Fluids;
 import info.loenwind.enderioaddons.machine.afarm.AgriDetector;
@@ -117,7 +118,7 @@ public class NEIEnderIOConfig implements IConfigureNEI {
 
   @Override
   public String getVersion() {
-    return EnderIOAddons.VERSION;
+    return Tags.VERSION;
   }
 
 }

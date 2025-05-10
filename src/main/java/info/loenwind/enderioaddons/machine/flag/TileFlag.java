@@ -40,25 +40,25 @@ public class TileFlag extends TileEntityEio {
 
   /*
    * States:
-   * 
+   *
    * renderAge == -1 && isFreshlyPlaced && client
-   * 
+   *
    * No data from server yet
-   * 
+   *
    * renderAge == -1 && isFreshlyPlaced && server
-   * 
+   *
    * Freshly placed and not yet notified the client
-   * 
+   *
    * renderAge == -1 && !isFreshlyPlaced && server
-   * 
+   *
    * Client has been notified
-   * 
+   *
    * renderAge >= 0 && client
-   * 
+   *
    * We know our age because the server told us
-   * 
+   *
    * renderAge == -1 && !isFreshlyPlaced && client
-   * 
+   *
    * We don't know our age, but the server told us we are not new
    */
 
@@ -159,7 +159,7 @@ public class TileFlag extends TileEntityEio {
   private final long[] lastSoundTick = new long[soundsIds.length];
 
   public void playSound(int id) {
-    if (crazypants.enderio.config.Config.machineSoundsEnabled && lastSoundTick[id] <= EnderIO.proxy.getTickCount()) {
+    if (Config.machineSoundsEnabled && lastSoundTick[id] <= EnderIO.proxy.getTickCount()) {
       lastSoundTick[id] = EnderIO.proxy.getTickCount() + soundDurations[id];
       getWorldObj().playSound(xCoord + 0.5f, yCoord + 0.5f, zCoord + 0.5f, EnderIOAddons.DOMAIN + ":" + soundsIds[id], Config.machineSoundVolume, 1.0f, false);
     }

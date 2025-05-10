@@ -90,7 +90,7 @@ public class TESRFrameworkMachine extends TileEntitySpecialRenderer {
 
     Tessellator.instance.startDrawingQuads();
     Tessellator.instance.addTranslation(x, y, z);
-    CubeRenderer.render(bb, icon);
+    CubeRenderer.get().render(bb, icon);
     Tessellator.instance.addTranslation(-x, -y, -z);
     Tessellator.instance.draw();
 
